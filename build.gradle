@@ -1,0 +1,40 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:0.4'
+  }
+}
+apply plugin: 'android-library'
+
+dependencies {
+  compile 'com.android.support:support-v4:13.0.0'
+}
+
+android {
+  compileSdkVersion 17
+  buildToolsVersion "17.0.0"
+
+    defaultConfig {
+      minSdkVersion 8
+      targetSdkVersion 13
+    }
+}
+
+// プロジェクトルート配下のrepositoryディレクトリにデプロイする
+def deployTo = new File(rootDir,  "repository")
+
+// Mavenプラグインの利用を宣言
+apply plugin: 'maven'
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      repository url: "file:///Users/togu/work/facebook-android-sdk/facebook/repository"
+      pom.version = '3.0.1' // ライブラリバージョン
+      pom.groupId = 'com.facebook.android' // グループ名
+      pom.artifactId = 'facebool-android-sdk' // アーティファクト名
+    }
+  }
+}
