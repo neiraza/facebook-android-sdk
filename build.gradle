@@ -34,7 +34,7 @@ uploadArchives {
       repository url: "file:///Users/togu/work/facebook-android-sdk/facebook/repository"
       pom.version = '3.0.1' // ライブラリバージョン
       pom.groupId = 'com.facebook.android' // グループ名
-      pom.artifactId = 'facebool-android-sdk' // アーティファクト名
+      pom.artifactId = 'facebook-android-sdk' // アーティファクト名
     }
   }
 }

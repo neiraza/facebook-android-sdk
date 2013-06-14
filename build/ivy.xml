@@ -4,7 +4,7 @@
 		module="facebook"
 		revision="unspecified"
 		status="integration"
-		publication="20130615012852"
+		publication="20130615022848"
 	/>
 	<configurations>
 		<conf name="archives" visibility="public" description="Configuration for archive artifacts."/>
